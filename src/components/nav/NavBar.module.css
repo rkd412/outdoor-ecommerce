@@ -1,6 +1,31 @@
 .nav-bar {
   background-color: purple;
+  position: sticky;
+  height: 10vh;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  line-height: 10vh;
   height: 10vh;
   width: 100%;
   text-align: center;
+  font-size: 2em;
+  z-index: 9999;
+}
+
+.nav-bar ul {
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+}
+
+.ul li {
+  display: inline;
+  box-sizing: border-box;
+  margin: 0 2vw 0 2vw;
+  margin-left: auto;
+}
+
+.night-nav-bar ul li:first-child {
+  margin-left: auto;
 }
