@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 import Button from "@mui/material/Button";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import Toolbar from "@mui/material/Toolbar";
 
@@ -16,10 +16,11 @@ const NavBar = () => {
         <Link to="/about">About</Link>
         <Link to="/products">Products</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/cart">Cart</Link>
-        <Button variant="contained" endIcon={<ShoppingCartIcon />}>
-  Cart
-</Button>
+        <Link to="/cart">
+          <Button variant="contained" endIcon={<ShoppingCartIcon />}>
+            Cart
+          </Button>
+        </Link>
       </Toolbar>
     </Fragment>
   );

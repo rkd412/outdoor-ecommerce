@@ -1,6 +1,7 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
+import Rating from "@mui/material/Rating";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -107,8 +108,8 @@ export default function Album() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                  <Rating name="half-rating" defaultValue={5} precision={0.5} />
+                    <Button size="small">Add</Button>
                   </CardActions>
                 </Card>
               </Grid>
@@ -116,6 +117,7 @@ export default function Album() {
           </Grid>
         </Container>
       </main>
+
       {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
