@@ -109,7 +109,7 @@ export default function Album() {
                   </CardContent>
                   <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                    <Button size="small">Add</Button>
+                    <Button size="small">Add to cart</Button>
                   </CardActions>
                 </Card>
               </Grid>

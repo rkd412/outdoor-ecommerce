@@ -2,8 +2,10 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 import Button from "@mui/material/Button";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
+import Badge from '@mui/material/Badge';
+import IconButton from '@mui/material/IconButton';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Toolbar from "@mui/material/Toolbar";
 
 import styles from "./NavBar.module.css";
@@ -17,7 +19,11 @@ const NavBar = () => {
         <Link to="/products">Products</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/cart">
-          <Button variant="contained" endIcon={<ShoppingCartIcon />}>
+          <Button variant="contained" endIcon={  <IconButton aria-label="cart">
+      <Badge badgeContent={0} color="secondary" showZero>
+        <ShoppingCartIcon />
+      </Badge>
+    </IconButton>}>
             Cart
           </Button>
         </Link>
