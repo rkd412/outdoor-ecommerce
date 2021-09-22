@@ -19,7 +19,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        RKD412
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -31,7 +31,7 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const theme = createTheme();
 
-export default function Album() {
+export default function ProductsPAge() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -120,16 +120,14 @@ export default function Album() {
 
       {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
+  
         <Typography
           variant="subtitle1"
           align="center"
           color="text.secondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+        Built with MUI. Thanks for Looking!
         </Typography>
         <Copyright />
       </Box>
