@@ -19,62 +19,52 @@ const NavBar = () => {
     <Fragment>
       <AppBar position="fixed">
         <Toolbar variant="dense">
-          <div>
-            <Stack
-              direction="row"
-              justifyContent="flex-start"
-              alignItems="center"
-              spacing={2}
-            >
-              <RouterLink to="/">
-                <Link underline="hover" color="secondary">
-                  Home
-                </Link>
-              </RouterLink>
-              <RouterLink to="/about">
-                <Link underline="hover" color="secondary">
-                  About
-                </Link>
-              </RouterLink>
-              <RouterLink to="/products">
-                <Link underline="hover" color="secondary">
-                  Products
-                </Link>
-              </RouterLink>
-              <RouterLink to="/contact">
-                <Link underline="hover" color="secondary">
-                  Contact
-                </Link>
-              </RouterLink>
-            </Stack>
-          </div>
-          <div>
-            <Stack
-              direction="row"
-              justifyContent="flex-end"
-              alignItems="center"
-              spacing={2}
-            >
-              <RouterLink to="/cart">
-                <Button
-                  color="secondary"
-                  variant="contained"
-                  endIcon={
-                    <IconButton aria-label="cart">
-                      <Badge badgeContent={0} color="secondary" showZero>
-                        <ShoppingCartIcon />
-                      </Badge>
-                    </IconButton>
-                  }
-                >
-                  Cart
-                </Button>
-              </RouterLink>
-              <RouterLink to="/signin">
-                <Avatar src="/broken-image.jpg" />
-              </RouterLink>
-            </Stack>
-          </div>
+          <Stack
+            direction="row"
+            justifyContent="flex-center"
+            alignItems="center"
+            spacing={4}
+          >
+            <RouterLink to="/">
+              <Link underline="hover" color="secondary">
+                Home
+              </Link>
+            </RouterLink>
+            <RouterLink to="/about">
+              <Link underline="hover" color="secondary">
+                About
+              </Link>
+            </RouterLink>
+            <RouterLink to="/products">
+              <Link underline="hover" color="secondary">
+                Products
+              </Link>
+            </RouterLink>
+            <RouterLink to="/contact">
+              <Link underline="hover" color="secondary">
+                Contact
+              </Link>
+            </RouterLink>
+
+            <RouterLink to="/cart">
+              <Button
+                color="secondary"
+                variant="contained"
+                endIcon={
+                  <IconButton aria-label="cart">
+                    <Badge badgeContent={0} color="secondary" showZero>
+                      <ShoppingCartIcon />
+                    </Badge>
+                  </IconButton>
+                }
+              >
+                Cart
+              </Button>
+            </RouterLink>
+            <RouterLink to="/signin">
+              <Avatar src="/broken-image.jpg" />
+            </RouterLink>
+          </Stack>
         </Toolbar>
       </AppBar>
     </Fragment>
