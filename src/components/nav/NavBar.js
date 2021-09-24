@@ -5,11 +5,11 @@ import { Link as RouterLink } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Badge from "@mui/material/Badge";
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Avatar from "@mui/material/Avatar";
 import Link from "@mui/material/Link";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 
 import styles from "./NavBar.module.css";
@@ -18,13 +18,11 @@ const NavBar = () => {
   return (
     <Fragment>
       <AppBar position="fixed">
-        <Toolbar variant="dense">
-          <Stack
-            direction="row"
-            justifyContent="flex-center"
-            alignItems="center"
-            spacing={4}
-          >
+        <Toolbar
+          variant="dense"
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
+          <Box display="flex" flexDirection="row">
             <RouterLink to="/">
               <Link underline="hover" color="secondary">
                 Home
@@ -45,7 +43,9 @@ const NavBar = () => {
                 Contact
               </Link>
             </RouterLink>
+          </Box>
 
+          <Box display="flex" flexDirection="row">
             <RouterLink to="/cart">
               <Button
                 color="secondary"
@@ -64,7 +64,7 @@ const NavBar = () => {
             <RouterLink to="/signin">
               <Avatar src="/broken-image.jpg" />
             </RouterLink>
-          </Stack>
+          </Box>
         </Toolbar>
       </AppBar>
     </Fragment>
