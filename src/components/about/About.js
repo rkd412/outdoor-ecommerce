@@ -1,11 +1,12 @@
 import * as React from "react";
 
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+import Dusk from "../../assests/dusk.jpg";
 
 function Copyright() {
   return (
@@ -26,38 +27,16 @@ export default function About() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-
-      <main>
-        {/* Hero unit */}
-        <Box
-          sx={{
-            bgcolor: "background.paper",
-            pt: 8,
-            pb: 6,
-          }}
-        >
-          <Container maxWidth="sm">
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              About
-            </Typography>
-            <Typography
-              variant="h5"
-              align="center"
-              color="text.secondary"
-              paragraph
-            >
-              Founded in such and such time at such and such place! Happy to
-              provide outdoor goods to our loyal customers!
-            </Typography>
-          </Container>
-        </Box>
-      </main>
+      <Box
+        sx={{
+          height: "100vh",
+          width: "100vw",
+          backgroundImage: "url(" + Dusk + ")",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      ></Box>
 
       {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">

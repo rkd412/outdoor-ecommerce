@@ -17,8 +17,6 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import Tooltip from "@mui/material/Tooltip";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import styles from "./Cart.module.css";
-
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
@@ -77,8 +75,18 @@ export default function Album() {
                         <AddIcon />
                       </Button>
                     </Tooltip>
-
-                    {0}
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        padding: "1em"
+                      }}
+                    >
+                      <Typography   sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}>{0}</Typography>
+                    </Box>
 
                     <Tooltip title="Less" arrow>
                       <Button size="small">

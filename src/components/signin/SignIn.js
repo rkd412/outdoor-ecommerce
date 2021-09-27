@@ -14,7 +14,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import Mountaineering from "../../assests/mountaineering.jpg"
+import Hiker from "../../assests/hiker.jpg"
 
 function Copyright() {
   return (
@@ -62,7 +62,7 @@ export default function SignIn() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url('+ Mountaineering +')',
+            backgroundImage: 'url('+ Hiker +')',
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
