@@ -34,13 +34,13 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const theme = createTheme();
 
-export default function Album() {
+export default function Cart() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
       <main>
-        <Container sx={{ py: 8 }} maxWidth="md">
+        <Container sx={{ py: 8, mt: "100px" }} maxWidth="md">
           <Grid container spacing={4}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
@@ -54,8 +54,7 @@ export default function Album() {
                   <CardMedia
                     component="img"
                     sx={{
-                      // 16:9
-                      pt: "56.25%",
+                      pt: "10%",
                     }}
                     image="https://source.unsplash.com/random"
                     alt="random"
@@ -79,15 +78,18 @@ export default function Album() {
                       sx={{
                         display: "flex",
                         justifyContent: "center",
-                        padding: "1em"
+                        padding: "1em",
                       }}
                     >
-                      <Typography   sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}>{0}</Typography>
+                      <Typography
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        {0}
+                      </Typography>
                     </Box>
-
                     <Tooltip title="Less" arrow>
                       <Button size="small">
                         <RemoveIcon />
@@ -107,7 +109,6 @@ export default function Album() {
         </Container>
       </main>
 
-      {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
         <Typography
           variant="subtitle1"
@@ -119,7 +120,6 @@ export default function Album() {
         </Typography>
         <Copyright />
       </Box>
-      {/* End footer */}
     </ThemeProvider>
   );
 }

@@ -31,13 +31,11 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const theme = createTheme();
 
-export default function ProductsPAge() {
+export default function ProductsPage() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-
       <main>
-        {/* Hero unit */}
         <Box
           sx={{
             bgcolor: "background.paper",
@@ -51,9 +49,10 @@ export default function ProductsPAge() {
               variant="h2"
               align="center"
               color="text.primary"
+              mt="100px"
               gutterBottom
             >
-              Album layout
+              Outdoor Products
             </Typography>
             <Typography
               variant="h5"
@@ -61,25 +60,13 @@ export default function ProductsPAge() {
               color="text.secondary"
               paragraph
             >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
+              Please check out our outdoor products below! We have a wide
+              variety to meet all of your outdoor needs.
             </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
-            </Stack>
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
-          {/* End hero unit */}
-
-          <Grid container spacing={4}>
+          <Grid container spacing={8}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
@@ -92,8 +79,7 @@ export default function ProductsPAge() {
                   <CardMedia
                     component="img"
                     sx={{
-                      // 16:9
-                      pt: "56.25%",
+                      pt: "20%",
                     }}
                     image="https://source.unsplash.com/random"
                     alt="random"
@@ -108,7 +94,11 @@ export default function ProductsPAge() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                  <Rating name="half-rating" defaultValue={5} precision={0.5} />
+                    <Rating
+                      name="half-rating"
+                      defaultValue={5}
+                      precision={0.5}
+                    />
                     <Button size="small">Add to cart</Button>
                   </CardActions>
                 </Card>
@@ -118,20 +108,17 @@ export default function ProductsPAge() {
         </Container>
       </main>
 
-      {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
-  
         <Typography
           variant="subtitle1"
           align="center"
           color="text.secondary"
           component="p"
         >
-        Built with MUI. Thanks for Looking!
+          Built with MUI. Thanks for Looking!
         </Typography>
         <Copyright />
       </Box>
-      {/* End footer */}
     </ThemeProvider>
   );
 }

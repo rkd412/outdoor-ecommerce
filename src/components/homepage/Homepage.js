@@ -27,6 +27,7 @@ export default function Homepage() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+
       <Box
         sx={{
           height: "100vh",
@@ -35,10 +36,31 @@ export default function Homepage() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          align: "center",
         }}
-      ></Box>
+      >
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "100vh",
+          }}
+        >
+          <Typography
+            variant="h3"
+            align="center"
+            color="white"
+            margin="0vh 5vw 15vh 5vw"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </Typography>
+        </Box>
+      </Box>
 
-      {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
         <Typography
           variant="subtitle1"
@@ -50,7 +72,6 @@ export default function Homepage() {
         </Typography>
         <Copyright />
       </Box>
-      {/* End footer */}
     </ThemeProvider>
   );
 }

@@ -136,7 +136,7 @@ export default function Contact() {
         </div>
       </Box>
 
-      {/* Footer */}
+   
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
         <Typography
           variant="subtitle1"
@@ -148,7 +148,7 @@ export default function Contact() {
         </Typography>
         <Copyright />
       </Box>
-      {/* End footer */}
+
     </ThemeProvider>
   );
 }
