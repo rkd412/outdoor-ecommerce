@@ -51,7 +51,7 @@ export default function About() {
             align="center"
             color="white"
             paragraph
-            margin="0vh 5vw 15vh 5vw"
+            margin="0vh 5vw 5vh 5vw"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

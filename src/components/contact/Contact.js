@@ -64,8 +64,7 @@ export default function Contact() {
                   component="p"
                   gutterBottom
                 >
-                  Fill up the form and our team will get back to you within 24
-                  hours.
+                  Fill out the form below and we will get back to you ASAP.
                 </Typography>
                 <form>
                   <Grid container spacing={1}>
@@ -136,7 +135,6 @@ export default function Contact() {
         </div>
       </Box>
 
-   
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
         <Typography
           variant="subtitle1"
@@ -148,7 +146,6 @@ export default function Contact() {
         </Typography>
         <Copyright />
       </Box>
-
     </ThemeProvider>
   );
 }

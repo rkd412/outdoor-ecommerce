@@ -51,7 +51,7 @@ export default function Homepage() {
             variant="h3"
             align="center"
             color="white"
-            margin="0vh 5vw 15vh 5vw"
+            margin="0vh 5vw 5vh 5vw"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
