@@ -13,11 +13,22 @@ import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+import Backpack from "../../assests/product-backpack.jpg";
+import Boots from "../../assests/product-boots.jpg";
+import Flashlight from "../../assests/product-flashlight.jpg";
+import Pan from "../../assests/product-pan.jpg";
+import SleepingBag from "../../assests/product-sleeping-bag.jpg";
+import Tent from "../../assests/product-tent.jpg";
+
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link
+        color="inherit"
+        href="https://www.linkedin.com/in/robert-davis-b72893217/"
+        target="_blank"
+      >
         RKD412
       </Link>{" "}
       {new Date().getFullYear()}
@@ -25,8 +36,6 @@ function Copyright() {
     </Typography>
   );
 }
-
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const theme = createTheme();
 
@@ -44,20 +53,12 @@ export default function ProductsPage() {
         >
           <Container maxWidth="sm">
             <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              mt="100px"
-              gutterBottom
-            >
-              Outdoor Products
-            </Typography>
-            <Typography
               variant="h5"
               align="center"
               color="text.secondary"
               paragraph
+              mt="100px"
+              gutterBottom
             >
               Please check out our outdoor products below! We have a wide
               variety to meet all of your outdoor needs.
@@ -66,43 +67,194 @@ export default function ProductsPage() {
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
           <Grid container spacing={8}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card
+            <Grid item key="boots" xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
                   sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
+                    pt: "10%",
+                    maxHeight: 640,
                   }}
-                >
-                  <CardMedia
-                    component="img"
-                    sx={{
-                      pt: "20%",
-                    }}
-                    image="https://source.unsplash.com/random"
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Rating
-                      name="half-rating"
-                      defaultValue={5}
-                      precision={0.5}
-                    />
-                    <Button size="small">Add to cart</Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
+                  image={Boots}
+                  alt="random"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Boots
+                  </Typography>
+                  <Typography>
+                    Reliable hiking boots to get you there and back again.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Rating name="half-rating" defaultValue={5} precision={0.5} />
+                  <Button size="small">Add to cart</Button>
+                </CardActions>
+              </Card>
+            </Grid>
+
+            <Grid item key="boots" xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  sx={{
+                    pt: "10%",
+                  }}
+                  image={Tent}
+                  alt="random"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Tent
+                  </Typography>
+                  <Typography>
+                    All season tent to provide you with shelter and safety.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Rating name="half-rating" defaultValue={5} precision={0.5} />
+                  <Button size="small">Add to cart</Button>
+                </CardActions>
+              </Card>
+            </Grid>
+
+            <Grid item key="boots" xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  sx={{
+                    pt: "10%",
+                    maxHeight: 426,
+                  }}
+                  image={Backpack}
+                  alt="random"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Backpack
+                  </Typography>
+                  <Typography>
+                    Backpack to carry all your outdoor goods on the trail.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Rating name="half-rating" defaultValue={5} precision={0.5} />
+                  <Button size="small">Add to cart</Button>
+                </CardActions>
+              </Card>
+            </Grid>
+
+            <Grid item key="boots" xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  sx={{
+                    pt: "10%",
+                  }}
+                  image={SleepingBag}
+                  alt="random"
+                  height="185"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Sleeping Bag
+                  </Typography>
+                  <Typography>
+                    Warm sleeping bag to keep you well rested.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Rating name="half-rating" defaultValue={5} precision={0.5} />
+                  <Button size="small">Add to cart</Button>
+                </CardActions>
+              </Card>
+            </Grid>
+
+            <Grid item key="boots" xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  sx={{
+                    pt: "10%",
+                  }}
+                  image={Pan}
+                  alt="random"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Frying Pan
+                  </Typography>
+                  <Typography>
+                    Perfect pan to fry your morning breakfast.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Rating name="half-rating" defaultValue={5} precision={0.5} />
+                  <Button size="small">Add to cart</Button>
+                </CardActions>
+              </Card>
+            </Grid>
+
+            <Grid item key="boots" xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  sx={{
+                    pt: "10%",
+                  }}
+                  image={Flashlight}
+                  alt="random"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Flashlight
+                  </Typography>
+                  <Typography>
+                    Reliable flashlight to help you always find your way home.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Rating name="half-rating" defaultValue={5} precision={0.5} />
+                  <Button size="small">Add to cart</Button>
+                </CardActions>
+              </Card>
+            </Grid>
           </Grid>
         </Container>
       </main>

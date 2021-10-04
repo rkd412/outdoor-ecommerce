@@ -12,6 +12,8 @@ import Link from "@mui/material/Link";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Toolbar from "@mui/material/Toolbar";
 
+import Campfire from "../../assests/icon-campfire.png";
+
 const NavBar = () => {
   return (
     <AppBar position="fixed">
@@ -25,16 +27,21 @@ const NavBar = () => {
       >
         <Box sx={{ display: "flex", flexDirection: "row", gap: 12 }}>
           <RouterLink to="/">
-            <Link color="#ecebbd">HOME</Link>
+            <Link color="#ecebbd">
+              <img src={Campfire} alt="Logo" style={{height: 50, width: 50}}/>
+            </Link>
           </RouterLink>
-          <RouterLink to="/about">
-            <Link color="#ecebbd">ABOUT</Link>
-          </RouterLink>
+        </Box>
+
+        <Box sx={{ display: "flex", flexDirection: "row", gap: 12 }}>
           <RouterLink to="/products">
             <Link color="#ecebbd">PRODUCTS</Link>
           </RouterLink>
           <RouterLink to="/contact">
             <Link color="#ecebbd">CONTACT</Link>
+          </RouterLink>
+          <RouterLink to="/about">
+            <Link color="#ecebbd">ABOUT</Link>
           </RouterLink>
         </Box>
 

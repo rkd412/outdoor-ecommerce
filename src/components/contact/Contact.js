@@ -17,7 +17,11 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link
+        color="inherit"
+        href="https://www.linkedin.com/in/robert-davis-b72893217/"
+        target="_blank"
+      >
         RKD412
       </Link>{" "}
       {new Date().getFullYear()}

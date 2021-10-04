@@ -12,7 +12,11 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link
+        color="inherit"
+        href="https://www.linkedin.com/in/robert-davis-b72893217/"
+        target="_blank"
+      >
         RKD412
       </Link>{" "}
       {new Date().getFullYear()}
@@ -53,10 +57,8 @@ export default function Homepage() {
             color="white"
             margin="0vh 5vw 5vh 5vw"
           >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            A place to find all your wilderness needs so you can get
+            back outside and explore.
           </Typography>
         </Box>
       </Box>

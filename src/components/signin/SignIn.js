@@ -14,7 +14,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import Hiker from "../../assests/hiker.jpg"
+import Hiker from "../../assests/hiker.jpg";
 
 function Copyright() {
   return (
@@ -29,7 +29,11 @@ function Copyright() {
       </Typography>
       <Typography variant="body2" color="text.secondary" align="center">
         {"Copyright © "}
-        <Link color="inherit" href="https://material-ui.com/">
+        <Link
+          color="inherit"
+          href="https://www.linkedin.com/in/robert-davis-b72893217/"
+          target="_blank"
+        >
           RKD412
         </Link>{" "}
         {new Date().getFullYear()}
@@ -62,7 +66,7 @@ export default function SignIn() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url('+ Hiker +')',
+            backgroundImage: "url(" + Hiker + ")",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"

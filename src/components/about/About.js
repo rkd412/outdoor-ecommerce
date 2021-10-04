@@ -3,16 +3,22 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Link from "@mui/material/Link";
+import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import Dusk from "../../assests/dusk.jpg";
+import Headquarters from "../../assests/headquarters.jpg";
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link
+        color="inherit"
+        href="https://www.linkedin.com/in/robert-davis-b72893217/"
+        target="_blank"
+      >
         RKD412
       </Link>{" "}
       {new Date().getFullYear()}
@@ -41,22 +47,30 @@ export default function About() {
         <Box
           sx={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "space-around",
             alignItems: "center",
             minHeight: "100vh",
           }}
         >
+          <Paper variant="outlined">
+            <img
+              src={Headquarters}
+              alt="Headquarters"
+              style={{ height: "40vh", width: "30vw", margin: "10px" }}
+            />
+          </Paper>
           <Typography
-            variant="h3"
-            align="center"
+            variant="h4"
+            align="justify"
             color="white"
             paragraph
             margin="0vh 5vw 5vh 5vw"
+            maxWidth="40vw"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Founded circa 1988 and headquartered in Kiefern, WA - Our love of
+            the wilderness and planet earth is key to our success. We hope you
+            enjoy the top quality products you find here and put them to good
+            use. See you outside!
           </Typography>
         </Box>
       </Box>
