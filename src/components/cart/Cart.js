@@ -17,6 +17,13 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import Tooltip from "@mui/material/Tooltip";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+import Backpack from "../../assests/product-backpack.jpg";
+import Boots from "../../assests/product-boots.jpg";
+import Flashlight from "../../assests/product-flashlight.jpg";
+import Pan from "../../assests/product-pan.jpg";
+import SleepingBag from "../../assests/product-sleeping-bag.jpg";
+import Tent from "../../assests/product-tent.jpg";
+
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
@@ -34,8 +41,6 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 const theme = createTheme();
 
 export default function Cart() {
@@ -45,70 +50,129 @@ export default function Cart() {
 
       <main>
         <Container sx={{ py: 8, mt: "100px" }} maxWidth="md">
-          <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card
+          <Grid container spacing={4}  flexDirection="column">
+            <Grid item key={1} xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
                   sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
+                    pt: "10%",
                   }}
-                >
-                  <CardMedia
-                    component="img"
+                  image={Boots}
+                  alt="Boots"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Heading
+                  </Typography>
+                  <Typography>
+                    This is a media card. You can use this section to describe
+                    the content.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Tooltip title="More" arrow>
+                    <Button size="small">
+                      <AddIcon />
+                    </Button>
+                  </Tooltip>
+                  <Box
                     sx={{
-                      pt: "10%",
+                      display: "flex",
+                      justifyContent: "center",
+                      padding: "1em",
                     }}
-                    image="https://source.unsplash.com/random"
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Tooltip title="More" arrow>
-                      <Button size="small">
-                        <AddIcon />
-                      </Button>
-                    </Tooltip>
-                    <Box
+                  >
+                    <Typography
                       sx={{
                         display: "flex",
                         justifyContent: "center",
-                        padding: "1em",
                       }}
                     >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        {0}
-                      </Typography>
-                    </Box>
-                    <Tooltip title="Less" arrow>
-                      <Button size="small">
-                        <RemoveIcon />
-                      </Button>
-                    </Tooltip>
+                      {1}
+                    </Typography>
+                  </Box>
+                  <Tooltip title="Less" arrow>
+                    <Button size="small">
+                      <RemoveIcon />
+                    </Button>
+                  </Tooltip>
+                  <Tooltip title="Delete" arrow>
+                    <Button size="small">
+                      <DeleteIcon />
+                    </Button>
+                  </Tooltip>
+                </CardActions>
+              </Card>
+            </Grid>
 
-                    <Tooltip title="Delete" arrow>
-                      <Button size="small">
-                        <DeleteIcon />
-                      </Button>
-                    </Tooltip>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
+            <Grid item key={1} xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  sx={{
+                    pt: "10%",
+                  }}
+                  image={Boots}
+                  alt="random"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Heading
+                  </Typography>
+                  <Typography>
+                    This is a media card. You can use this section to describe
+                    the content.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Tooltip title="More" arrow>
+                    <Button size="small">
+                      <AddIcon />
+                    </Button>
+                  </Tooltip>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      padding: "1em",
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {1}
+                    </Typography>
+                  </Box>
+                  <Tooltip title="Less" arrow>
+                    <Button size="small">
+                      <RemoveIcon />
+                    </Button>
+                  </Tooltip>
+
+                  <Tooltip title="Delete" arrow>
+                    <Button size="small">
+                      <DeleteIcon />
+                    </Button>
+                  </Tooltip>
+                </CardActions>
+              </Card>
+            </Grid>
           </Grid>
         </Container>
       </main>

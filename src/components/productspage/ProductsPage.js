@@ -88,9 +88,10 @@ export default function ProductsPage() {
                   <Typography gutterBottom variant="h5" component="h2">
                     Boots
                   </Typography>
-                  <Typography>
+                  <Typography gutterBottom>
                     Reliable hiking boots to get you there and back again.
                   </Typography>
+                  <Typography variant="h6">$180</Typography>
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
@@ -119,9 +120,10 @@ export default function ProductsPage() {
                   <Typography gutterBottom variant="h5" component="h2">
                     Tent
                   </Typography>
-                  <Typography>
+                  <Typography gutterBottom>
                     All season tent to provide you with shelter and safety.
                   </Typography>
+                  <Typography variant="h6">$325</Typography>
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
@@ -151,9 +153,10 @@ export default function ProductsPage() {
                   <Typography gutterBottom variant="h5" component="h2">
                     Backpack
                   </Typography>
-                  <Typography>
+                  <Typography gutterBottom>
                     Backpack to carry all your outdoor goods on the trail.
                   </Typography>
+                  <Typography variant="h6">$240</Typography>
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
@@ -183,9 +186,10 @@ export default function ProductsPage() {
                   <Typography gutterBottom variant="h5" component="h2">
                     Sleeping Bag
                   </Typography>
-                  <Typography>
+                  <Typography gutterBottom>
                     Warm sleeping bag to keep you well rested.
                   </Typography>
+                  <Typography variant="h6">$220</Typography>
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
@@ -214,9 +218,10 @@ export default function ProductsPage() {
                   <Typography gutterBottom variant="h5" component="h2">
                     Frying Pan
                   </Typography>
-                  <Typography>
+                  <Typography gutterBottom>
                     Perfect pan to fry your morning breakfast.
                   </Typography>
+                  <Typography variant="h6">$45</Typography>
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
@@ -245,9 +250,10 @@ export default function ProductsPage() {
                   <Typography gutterBottom variant="h5" component="h2">
                     Flashlight
                   </Typography>
-                  <Typography>
+                  <Typography gutterBottom>
                     Reliable flashlight to help you always find your way home.
                   </Typography>
+                  <Typography variant="h6">$30</Typography>
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
