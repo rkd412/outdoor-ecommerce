@@ -43,14 +43,32 @@ function Copyright() {
 
 const theme = createTheme();
 
-export default function Cart() {
+export default function Cart({ cartItems, setCartItems }) {
+  const increaseItemHandler = () => {
+    console.log("Increased Item!");
+    setCartItems(cartItems + 1);
+    console.log({ cartItems });
+  };
+
+  const decreaseItemHandler = () => {
+    console.log("Decreased item!");
+    setCartItems(cartItems - 1);
+    console.log({ cartItems });
+  };
+
+  const deleteFromCartHandler = () => {
+    console.log("Deleted from cart!");
+    setCartItems(cartItems - 1);
+    console.log({ cartItems });
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-
       <main>
         <Container sx={{ py: 8, mt: "100px" }} maxWidth="md">
-          <Grid container spacing={4}  flexDirection="column">
+          <Grid container spacing={4} flexDirection="column">
+
             <Grid item key={1} xs={12} sm={6} md={4}>
               <Card
                 sx={{
@@ -78,7 +96,7 @@ export default function Cart() {
                 </CardContent>
                 <CardActions>
                   <Tooltip title="More" arrow>
-                    <Button size="small">
+                    <Button size="small" onClick={increaseItemHandler}>
                       <AddIcon />
                     </Button>
                   </Tooltip>
@@ -99,12 +117,12 @@ export default function Cart() {
                     </Typography>
                   </Box>
                   <Tooltip title="Less" arrow>
-                    <Button size="small">
+                    <Button size="small" onClick={decreaseItemHandler}>
                       <RemoveIcon />
                     </Button>
                   </Tooltip>
                   <Tooltip title="Delete" arrow>
-                    <Button size="small">
+                    <Button size="small" onClick={deleteFromCartHandler}>
                       <DeleteIcon />
                     </Button>
                   </Tooltip>
@@ -112,67 +130,6 @@ export default function Cart() {
               </Card>
             </Grid>
 
-            <Grid item key={1} xs={12} sm={6} md={4}>
-              <Card
-                sx={{
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  sx={{
-                    pt: "10%",
-                  }}
-                  image={Boots}
-                  alt="random"
-                />
-                <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Heading
-                  </Typography>
-                  <Typography>
-                    This is a media card. You can use this section to describe
-                    the content.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Tooltip title="More" arrow>
-                    <Button size="small">
-                      <AddIcon />
-                    </Button>
-                  </Tooltip>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      padding: "1em",
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      {1}
-                    </Typography>
-                  </Box>
-                  <Tooltip title="Less" arrow>
-                    <Button size="small">
-                      <RemoveIcon />
-                    </Button>
-                  </Tooltip>
-
-                  <Tooltip title="Delete" arrow>
-                    <Button size="small">
-                      <DeleteIcon />
-                    </Button>
-                  </Tooltip>
-                </CardActions>
-              </Card>
-            </Grid>
           </Grid>
         </Container>
       </main>

@@ -14,7 +14,7 @@ import Toolbar from "@mui/material/Toolbar";
 
 import Campfire from "../../assests/icon-campfire.png";
 
-const NavBar = () => {
+const NavBar = ({ cartItems }) => {
   return (
     <AppBar position="fixed">
       <Toolbar
@@ -28,7 +28,11 @@ const NavBar = () => {
         <Box sx={{ display: "flex", flexDirection: "row", gap: 12 }}>
           <RouterLink to="/">
             <Link color="#ecebbd">
-              <img src={Campfire} alt="Logo" style={{height: 50, width: 50}}/>
+              <img
+                src={Campfire}
+                alt="Logo"
+                style={{ height: 50, width: 50 }}
+              />
             </Link>
           </RouterLink>
         </Box>
@@ -53,7 +57,7 @@ const NavBar = () => {
               variant="contained"
               endIcon={
                 <IconButton aria-label="cart">
-                  <Badge badgeContent={0} color="secondary" showZero>
+                  <Badge badgeContent={cartItems} color="secondary" showZero>
                     <ShoppingCartIcon />
                   </Badge>
                 </IconButton>

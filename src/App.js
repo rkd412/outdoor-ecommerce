@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -15,16 +15,18 @@ import "./App.css";
 ///Hello hello hello hello?
 
 function App() {
+  const [cartItems, setCartItems] = useState(0);
+
   return (
     <Router>
       <div className="App">
-        <NavBar />
+        <NavBar cartItems={cartItems} />
         <Switch>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/products">
-            <ProductsPage />
+            <ProductsPage cartItems={cartItems} setCartItems={setCartItems} />
           </Route>
           <Route path="/contact">
             <Contact />
@@ -33,7 +35,7 @@ function App() {
             <SignIn />
           </Route>
           <Route path="/cart">
-            <Cart />
+            <Cart cartItems={cartItems} setCartItems={setCartItems} />
           </Route>
           <Route path="/">
             <Homepage />

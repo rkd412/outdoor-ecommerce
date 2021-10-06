@@ -57,7 +57,7 @@ export default function Homepage() {
             color="white"
             margin="0vh 5vw 5vh 5vw"
           >
-            A place to find all your wilderness needs so you can get
+            A place to find all of your wilderness needs so you can get
             back outside and explore.
           </Typography>
         </Box>

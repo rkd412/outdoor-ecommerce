@@ -39,7 +39,13 @@ function Copyright() {
 
 const theme = createTheme();
 
-export default function ProductsPage() {
+export default function ProductsPage({ cartItems, setCartItems }) {
+  const addToCartHandler = () => {
+    console.log("Added to cart!");
+    setCartItems(cartItems + 1);
+    console.log({ cartItems });
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -67,7 +73,12 @@ export default function ProductsPage() {
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
           <Grid container spacing={8}>
-            <Grid item key="boots" xs={12} sm={6} md={4}>
+
+
+
+
+
+            <Grid item key="Boots" xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -82,7 +93,7 @@ export default function ProductsPage() {
                     maxHeight: 640,
                   }}
                   image={Boots}
-                  alt="random"
+                  alt="Boots"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -95,12 +106,18 @@ export default function ProductsPage() {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small">Add to cart</Button>
+                  <Button size="small" onClick={addToCartHandler}>
+                    Add to cart
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
 
-            <Grid item key="boots" xs={12} sm={6} md={4}>
+
+
+          
+          
+            <Grid item key="Tent" xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -114,7 +131,7 @@ export default function ProductsPage() {
                     pt: "10%",
                   }}
                   image={Tent}
-                  alt="random"
+                  alt="Tent"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -127,12 +144,18 @@ export default function ProductsPage() {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small">Add to cart</Button>
+                  <Button size="small" onClick={addToCartHandler}>
+                    Add to cart
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
 
-            <Grid item key="boots" xs={12} sm={6} md={4}>
+
+
+
+
+            <Grid item key="Backpack" xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -147,7 +170,7 @@ export default function ProductsPage() {
                     maxHeight: 426,
                   }}
                   image={Backpack}
-                  alt="random"
+                  alt="Backpack"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -160,12 +183,18 @@ export default function ProductsPage() {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small">Add to cart</Button>
+                  <Button size="small" onClick={addToCartHandler}>
+                    Add to cart
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
 
-            <Grid item key="boots" xs={12} sm={6} md={4}>
+
+
+
+
+            <Grid item key="SleepingBag" xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -179,7 +208,7 @@ export default function ProductsPage() {
                     pt: "10%",
                   }}
                   image={SleepingBag}
-                  alt="random"
+                  alt="Sleeping Bag"
                   height="185"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
@@ -193,12 +222,18 @@ export default function ProductsPage() {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small">Add to cart</Button>
+                  <Button size="small" onClick={addToCartHandler}>
+                    Add to cart
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
 
-            <Grid item key="boots" xs={12} sm={6} md={4}>
+
+
+
+
+            <Grid item key="Pan" xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -212,7 +247,7 @@ export default function ProductsPage() {
                     pt: "10%",
                   }}
                   image={Pan}
-                  alt="random"
+                  alt="Pan"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -225,12 +260,18 @@ export default function ProductsPage() {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small">Add to cart</Button>
+                  <Button size="small" onClick={addToCartHandler}>
+                    Add to cart
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
 
-            <Grid item key="boots" xs={12} sm={6} md={4}>
+
+
+
+
+            <Grid item key="Flashlight" xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -244,7 +285,7 @@ export default function ProductsPage() {
                     pt: "10%",
                   }}
                   image={Flashlight}
-                  alt="random"
+                  alt="Flashlight"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -257,10 +298,17 @@ export default function ProductsPage() {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small">Add to cart</Button>
+                  <Button size="small" onClick={addToCartHandler}>
+                    Add to cart
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
+
+
+
+
+
           </Grid>
         </Container>
       </main>
