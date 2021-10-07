@@ -86,8 +86,7 @@ const theme = createTheme();
 
 export default function ProductsPage({ cartItems, setCartItems }) {
   const addToCartHandler = (e) => {
-    setCartItems((oldArray) => [...oldArray, e.currentTarget.value]);
-    console.log({ cartItems });
+    setCartItems((oldArray) => [...oldArray, e.currentTarget.value].sort());
   };
 
   return (

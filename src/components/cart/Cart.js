@@ -92,21 +92,32 @@ const theme = createTheme();
 
 export default function Cart({ cartItems, setCartItems }) {
   const increaseItemHandler = (e) => {
-    console.log("Increased item!");
-    console.log({ cartItems });
+    setCartItems((oldArray) => [...oldArray, e.currentTarget.value].sort());
   };
 
   const decreaseItemHandler = (e) => {
-    console.log("Decreased item!");
-    console.log({ cartItems });
+    console.log(cartItems);
   };
+
+  /*
+  
+  Why the fuck won't this work???
+
+  const decreaseItemHandler = (e) => {
+    console.log(
+      cartItems.splice(
+        cartItems.findIndex((a) => a === e.currentTarget.value),
+        1
+      )
+    );
+  };
+  
+  */
 
   const deleteFromCartHandler = (e) => {
     setCartItems(
       cartItems.filter((element) => ![e.currentTarget.value].includes(element))
     );
-    console.log("Item deleted!");
-    console.log(cartItems);
   };
 
   return (
@@ -116,7 +127,7 @@ export default function Cart({ cartItems, setCartItems }) {
         <Container sx={{ py: 8, mt: "100px" }} maxWidth="md">
           <Grid container spacing={8} flexDirection="column">
             {cartItems.filter(onlyUnique).map((x) => (
-              <Grid key={x} item xs={12} sm={6} md={6}>
+              <Grid item xs={12} sm={6} md={6}>
                 <Card
                   sx={{
                     height: "100%",
@@ -140,7 +151,11 @@ export default function Cart({ cartItems, setCartItems }) {
                   </CardContent>
                   <CardActions>
                     <Tooltip title="More" arrow>
-                      <Button size="small" onClick={increaseItemHandler}>
+                      <Button
+                        value={x}
+                        size="small"
+                        onClick={increaseItemHandler}
+                      >
                         <AddIcon />
                       </Button>
                     </Tooltip>
@@ -161,7 +176,11 @@ export default function Cart({ cartItems, setCartItems }) {
                       </Typography>
                     </Box>
                     <Tooltip title="Less" arrow>
-                      <Button size="small" onClick={decreaseItemHandler}>
+                      <Button
+                        value={x}
+                        size="small"
+                        onClick={decreaseItemHandler}
+                      >
                         <RemoveIcon />
                       </Button>
                     </Tooltip>
