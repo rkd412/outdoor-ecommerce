@@ -24,6 +24,51 @@ import Pan from "../../assests/product-pan.jpg";
 import SleepingBag from "../../assests/product-sleeping-bag.jpg";
 import Tent from "../../assests/product-tent.jpg";
 
+const PRODUCTS = [
+  {
+    id: 1,
+    image: { Boots },
+    name: "Boots",
+    description: "Reliable hiking boots to get you there and back again.",
+    price: 180,
+  },
+  {
+    id: 2,
+    image: { Tent },
+    name: "Tent",
+    description: "All season tent to provide you with shelter and safety",
+    price: 325,
+  },
+  {
+    id: 3,
+    image: { Backpack },
+    name: "Backpack",
+    description: "Backpack to carry all your outdoor goods on the trail.",
+    price: 240,
+  },
+  {
+    id: 4,
+    image: { SleepingBag },
+    name: "Sleping Bag",
+    description: "Warm sleeping bag to keep you well rested.",
+    price: 220,
+  },
+  {
+    id: 5,
+    image: { Pan },
+    name: "Frying Pan",
+    description: "Perfect pan to fry your morning breakfast.",
+    price: 45,
+  },
+  {
+    id: 6,
+    image: { Flashlight },
+    name: "Flashlight",
+    description: "Reliable flashlight to help you always find your way home.",
+    price: 30,
+  },
+];
+
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
@@ -57,7 +102,7 @@ export default function Cart({ cartItems, setCartItems }) {
   };
 
   const deleteFromCartHandler = () => {
-    console.log("Deleted from cart!");
+    console.log("Deleted!");
     setCartItems(cartItems - 1);
     console.log({ cartItems });
   };
@@ -68,6 +113,10 @@ export default function Cart({ cartItems, setCartItems }) {
       <main>
         <Container sx={{ py: 8, mt: "100px" }} maxWidth="md">
           <Grid container spacing={4} flexDirection="column">
+
+
+
+
 
             <Grid item key={1} xs={12} sm={6} md={4}>
               <Card
@@ -129,6 +178,9 @@ export default function Cart({ cartItems, setCartItems }) {
                 </CardActions>
               </Card>
             </Grid>
+
+
+
 
           </Grid>
         </Container>

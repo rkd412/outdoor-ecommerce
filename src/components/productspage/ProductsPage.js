@@ -37,12 +37,56 @@ function Copyright() {
   );
 }
 
+const PRODUCTS = [
+  {
+    id: 0,
+    image: { Boots },
+    name: "Boots",
+    description: "Reliable hiking boots to get you there and back again.",
+    price: 180,
+  },
+  {
+    id: 1,
+    image: { Tent },
+    name: "Tent",
+    description: "All season tent to provide you with shelter and safety",
+    price: 325,
+  },
+  {
+    id: 2,
+    image: { Backpack },
+    name: "Backpack",
+    description: "Backpack to carry all your outdoor goods on the trail.",
+    price: 240,
+  },
+  {
+    id: 3,
+    image: { SleepingBag },
+    name: "Sleping Bag",
+    description: "Warm sleeping bag to keep you well rested.",
+    price: 220,
+  },
+  {
+    id: 4,
+    image: { Pan },
+    name: "Frying Pan",
+    description: "Perfect pan to fry your morning breakfast.",
+    price: 45,
+  },
+  {
+    id: 5,
+    image: { Flashlight },
+    name: "Flashlight",
+    description: "Reliable flashlight to help you always find your way home.",
+    price: 30,
+  },
+];
+
 const theme = createTheme();
 
 export default function ProductsPage({ cartItems, setCartItems }) {
-  const addToCartHandler = () => {
-    console.log("Added to cart!");
-    setCartItems(cartItems + 1);
+  const addToCartHandler = (e) => {
+    setCartItems(PRODUCTS[e.target.id]);
     console.log({ cartItems });
   };
 
@@ -73,12 +117,7 @@ export default function ProductsPage({ cartItems, setCartItems }) {
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
           <Grid container spacing={8}>
-
-
-
-
-
-            <Grid item key="Boots" xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -106,18 +145,14 @@ export default function ProductsPage({ cartItems, setCartItems }) {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small" onClick={addToCartHandler}>
+                  <Button id="0" size="small" onClick={addToCartHandler}>
                     Add to cart
                   </Button>
                 </CardActions>
               </Card>
             </Grid>
 
-
-
-          
-          
-            <Grid item key="Tent" xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -144,18 +179,14 @@ export default function ProductsPage({ cartItems, setCartItems }) {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small" onClick={addToCartHandler}>
+                  <Button id="1" size="small" onClick={addToCartHandler}>
                     Add to cart
                   </Button>
                 </CardActions>
               </Card>
             </Grid>
 
-
-
-
-
-            <Grid item key="Backpack" xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -183,18 +214,14 @@ export default function ProductsPage({ cartItems, setCartItems }) {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small" onClick={addToCartHandler}>
+                  <Button id="2" size="small" onClick={addToCartHandler}>
                     Add to cart
                   </Button>
                 </CardActions>
               </Card>
             </Grid>
 
-
-
-
-
-            <Grid item key="SleepingBag" xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -222,18 +249,14 @@ export default function ProductsPage({ cartItems, setCartItems }) {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small" onClick={addToCartHandler}>
+                  <Button id="3" size="small" onClick={addToCartHandler}>
                     Add to cart
                   </Button>
                 </CardActions>
               </Card>
             </Grid>
 
-
-
-
-
-            <Grid item key="Pan" xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -260,18 +283,14 @@ export default function ProductsPage({ cartItems, setCartItems }) {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small" onClick={addToCartHandler}>
+                  <Button id="4" size="small" onClick={addToCartHandler}>
                     Add to cart
                   </Button>
                 </CardActions>
               </Card>
             </Grid>
 
-
-
-
-
-            <Grid item key="Flashlight" xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -298,17 +317,12 @@ export default function ProductsPage({ cartItems, setCartItems }) {
                 </CardContent>
                 <CardActions>
                   <Rating name="half-rating" defaultValue={5} precision={0.5} />
-                  <Button size="small" onClick={addToCartHandler}>
+                  <Button id="5" size="small" onClick={addToCartHandler}>
                     Add to cart
                   </Button>
                 </CardActions>
               </Card>
             </Grid>
-
-
-
-
-
           </Grid>
         </Container>
       </main>

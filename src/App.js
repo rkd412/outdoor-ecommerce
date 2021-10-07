@@ -15,7 +15,7 @@ import "./App.css";
 ///Hello hello hello hello?
 
 function App() {
-  const [cartItems, setCartItems] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
 
   return (
     <Router>

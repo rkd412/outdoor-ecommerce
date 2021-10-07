@@ -57,7 +57,7 @@ const NavBar = ({ cartItems }) => {
               variant="contained"
               endIcon={
                 <IconButton aria-label="cart">
-                  <Badge badgeContent={cartItems} color="secondary" showZero>
+                  <Badge badgeContent={cartItems.length} color="secondary" showZero>
                     <ShoppingCartIcon />
                   </Badge>
                 </IconButton>
