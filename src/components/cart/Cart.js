@@ -26,48 +26,50 @@ import Tent from "../../assests/product-tent.jpg";
 
 const PRODUCTS = [
   {
-    id: 1,
-    image: { Boots },
+    key: 0,
+    pic: Boots,
     name: "Boots",
     description: "Reliable hiking boots to get you there and back again.",
     price: 180,
   },
   {
-    id: 2,
-    image: { Tent },
+    key: 1,
+    pic: Tent,
     name: "Tent",
     description: "All season tent to provide you with shelter and safety",
     price: 325,
   },
   {
-    id: 3,
-    image: { Backpack },
+    key: 2,
+    pic: Backpack,
     name: "Backpack",
     description: "Backpack to carry all your outdoor goods on the trail.",
     price: 240,
   },
   {
-    id: 4,
-    image: { SleepingBag },
-    name: "Sleping Bag",
+    key: 3,
+    pic: SleepingBag,
+    name: "Sleeping Bag",
     description: "Warm sleeping bag to keep you well rested.",
     price: 220,
   },
   {
-    id: 5,
-    image: { Pan },
+    key: 4,
+    pic: Pan,
     name: "Frying Pan",
     description: "Perfect pan to fry your morning breakfast.",
     price: 45,
   },
   {
-    id: 6,
-    image: { Flashlight },
+    key: 5,
+    pic: Flashlight,
     name: "Flashlight",
     description: "Reliable flashlight to help you always find your way home.",
     price: 30,
   },
 ];
+
+const onlyUnique = (value, index, self) => self.indexOf(value) === index;
 
 function Copyright() {
   return (
@@ -89,22 +91,22 @@ function Copyright() {
 const theme = createTheme();
 
 export default function Cart({ cartItems, setCartItems }) {
-  const increaseItemHandler = () => {
-    console.log("Increased Item!");
-    setCartItems(cartItems + 1);
+  const increaseItemHandler = (e) => {
+    console.log("Increased item!");
     console.log({ cartItems });
   };
 
-  const decreaseItemHandler = () => {
+  const decreaseItemHandler = (e) => {
     console.log("Decreased item!");
-    setCartItems(cartItems - 1);
     console.log({ cartItems });
   };
 
-  const deleteFromCartHandler = () => {
-    console.log("Deleted!");
-    setCartItems(cartItems - 1);
-    console.log({ cartItems });
+  const deleteFromCartHandler = (e) => {
+    setCartItems(
+      cartItems.filter((element) => ![e.currentTarget.value].includes(element))
+    );
+    console.log("Item deleted!");
+    console.log(cartItems);
   };
 
   return (
@@ -112,76 +114,70 @@ export default function Cart({ cartItems, setCartItems }) {
       <CssBaseline />
       <main>
         <Container sx={{ py: 8, mt: "100px" }} maxWidth="md">
-          <Grid container spacing={4} flexDirection="column">
-
-
-
-
-
-            <Grid item key={1} xs={12} sm={6} md={4}>
-              <Card
-                sx={{
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <CardMedia
-                  component="img"
+          <Grid container spacing={8} flexDirection="column">
+            {cartItems.filter(onlyUnique).map((x) => (
+              <Grid key={x} item xs={12} sm={6} md={6}>
+                <Card
                   sx={{
-                    pt: "10%",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
                   }}
-                  image={Boots}
-                  alt="Boots"
-                />
-                <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Heading
-                  </Typography>
-                  <Typography>
-                    This is a media card. You can use this section to describe
-                    the content.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Tooltip title="More" arrow>
-                    <Button size="small" onClick={increaseItemHandler}>
-                      <AddIcon />
-                    </Button>
-                  </Tooltip>
-                  <Box
+                >
+                  <CardMedia
+                    component="img"
                     sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      padding: "1em",
+                      pt: "10%",
                     }}
-                  >
-                    <Typography
+                    image={PRODUCTS[x].pic}
+                    alt={x.title}
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {PRODUCTS[x].name}
+                    </Typography>
+                    <Typography>{PRODUCTS[x].description}</Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Tooltip title="More" arrow>
+                      <Button size="small" onClick={increaseItemHandler}>
+                        <AddIcon />
+                      </Button>
+                    </Tooltip>
+                    <Box
                       sx={{
                         display: "flex",
                         justifyContent: "center",
+                        padding: "1em",
                       }}
                     >
-                      {1}
-                    </Typography>
-                  </Box>
-                  <Tooltip title="Less" arrow>
-                    <Button size="small" onClick={decreaseItemHandler}>
-                      <RemoveIcon />
-                    </Button>
-                  </Tooltip>
-                  <Tooltip title="Delete" arrow>
-                    <Button size="small" onClick={deleteFromCartHandler}>
-                      <DeleteIcon />
-                    </Button>
-                  </Tooltip>
-                </CardActions>
-              </Card>
-            </Grid>
-
-
-
-
+                      <Typography
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        {cartItems.filter((i) => i === x).length}
+                      </Typography>
+                    </Box>
+                    <Tooltip title="Less" arrow>
+                      <Button size="small" onClick={decreaseItemHandler}>
+                        <RemoveIcon />
+                      </Button>
+                    </Tooltip>
+                    <Tooltip title="Delete" arrow>
+                      <Button
+                        value={x}
+                        size="small"
+                        onClick={deleteFromCartHandler}
+                      >
+                        <DeleteIcon />
+                      </Button>
+                    </Tooltip>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
         </Container>
       </main>
