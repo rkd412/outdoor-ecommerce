@@ -92,27 +92,18 @@ const theme = createTheme();
 
 export default function Cart({ cartItems, setCartItems }) {
   const increaseItemHandler = (e) => {
-    setCartItems((oldArray) => [...oldArray, e.currentTarget.value].sort());
+    setCartItems((prevCartItems) =>
+      [...prevCartItems, e.currentTarget.value].sort()
+    );
   };
 
   const decreaseItemHandler = (e) => {
-    console.log(cartItems);
-  };
-
-  /*
-  
-  Why the fuck won't this work???
-
-  const decreaseItemHandler = (e) => {
-    console.log(
-      cartItems.splice(
-        cartItems.findIndex((a) => a === e.currentTarget.value),
-        1
+    setCartItems((prevCartItems) =>
+      prevCartItems.filter(
+        (value, i) => i !== prevCartItems.indexOf(e.currentTarget.value)
       )
     );
   };
-  
-  */
 
   const deleteFromCartHandler = (e) => {
     setCartItems(
