@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { Link as RouterLink } from "react-router-dom";
+
 import AddIcon from "@mui/icons-material/Add";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -117,6 +119,31 @@ export default function Cart({ cartItems, setCartItems }) {
       <main>
         <Container sx={{ py: 8, mt: "100px" }} maxWidth="md">
           <Grid container spacing={8} flexDirection="column">
+            {cartItems.length <= 0 && (
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-around",
+                  alignItems: "center",
+                  minHeight: "60vh",
+                  marginBottom: "20vh",
+                }}
+              >
+                <Typography
+                  variant="h4"
+                  align="center"
+                  paragraph
+                  maxWidth="80vw"
+                >
+                  Your cart is empty! Visit our products page{" "}
+                  <RouterLink to="/products">
+                    <Link>here</Link>
+                  </RouterLink>{" "}
+                  to change that!
+                </Typography>
+              </Box>
+            )}
+
             {cartItems.filter(onlyUnique).map((x) => (
               <Grid item xs={12} sm={6} md={6}>
                 <Card
@@ -188,6 +215,62 @@ export default function Cart({ cartItems, setCartItems }) {
                 </Card>
               </Grid>
             ))}
+
+            {cartItems.length > 0 && (
+              <Card
+                sx={{
+                  position: "fixed",
+                  top: "20vh",
+                  right: "10vw",
+                  borderRadius: 5,
+                  p: 5,
+                  width: "30vw",
+                  height: "auto",
+                }}
+              >
+                <CardContent>
+                  <Typography
+                    variant="h6"
+                    align="center"
+                    color="black"
+                    paragraph
+                  >
+                    Order Summary
+                  </Typography>
+                  {cartItems.filter(onlyUnique).map((x) => (
+                    <Box p="10px">
+                      <Typography fontStyle="italic">
+                        {" "}
+                        {PRODUCTS[x].name}
+                      </Typography>
+                      <Typography fontStyle="oblique">
+                        {" "}
+                        ${PRODUCTS[x].price} X{" "}
+                        {cartItems.filter((i) => i === x).length} = $
+                        {PRODUCTS[x].price *
+                          cartItems.filter((i) => i === x).length}{" "}
+                      </Typography>
+                    </Box>
+                  ))}
+
+                  <Box>
+                    <Typography fontWeight="fontWeightBold" p="10px">
+                      Total: $
+                      {cartItems
+                        .map((x) => PRODUCTS[x].price)
+                        .reduce((partial_sum, a) => partial_sum + a, 0)}
+                    </Typography>
+                  </Box>
+                </CardContent>
+                <CardActions>
+                  <Grid container justifyContent="flex-end">
+                    <Button marginBottom="10" variant="contained" size="large">
+                      Check Out
+                    </Button>
+                  </Grid>
+                </CardActions>
+              </Card>
+            )}
           </Grid>
         </Container>
       </main>
