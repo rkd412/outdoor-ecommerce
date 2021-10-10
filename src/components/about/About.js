@@ -27,7 +27,17 @@ function Copyright() {
   );
 }
 
-const theme = createTheme();
+const theme = createTheme({
+  components: {
+    Typography: {
+      styleOverrides: {
+        root: {
+          color: "red",
+        },
+      },
+    },
+  },
+});
 
 export default function About() {
   return (
@@ -50,28 +60,35 @@ export default function About() {
             justifyContent: "space-around",
             alignItems: "center",
             minHeight: "100vh",
+            [theme.breakpoints.down("sm")]: {
+              flexDirection: "column",
+            },
           }}
         >
-          <Paper variant="outlined">
-            <img
-              src={Headquarters}
-              alt="Headquarters"
-              style={{ height: "40vh", width: "30vw", margin: "10px" }}
-            />
-          </Paper>
-          <Typography
-            variant="h4"
-            align="justify"
-            color="white"
-            paragraph
-            margin="0vh 5vw 5vh 5vw"
-            maxWidth="40vw"
+          <Box sx={{ margin: "5vw" }}>
+            <Paper variant="outlined">
+              <img
+                src={Headquarters}
+                alt="Headquarters"
+                style={{ height: "400px", width: "600px", margin: "10px" }}
+              />
+            </Paper>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-around",
+              alignItems: "center",
+              margin: "5vw",
+            }}
           >
-            Founded circa 1988 and headquartered in Kiefern, WA - Our love of
-            the wilderness and planet earth is key to our success. We hope you
-            enjoy the top quality products you find here and put them to good
-            use. See you outside!
-          </Typography>
+            <Typography variant="h4" align="justify" color="white" paragraph>
+              Founded circa 1988 and headquartered in Kiefern, WA - Our love of
+              the wilderness and planet earth is key to our success. We hope you
+              enjoy the top quality products you find here and put them to good
+              use. See you outside!
+            </Typography>
+          </Box>
         </Box>
       </Box>
 

@@ -39,13 +39,19 @@ const NavBar = ({ cartItems }) => {
 
         <Box sx={{ display: "flex", flexDirection: "row", gap: 12 }}>
           <RouterLink to="/products">
-            <Link color="#ecebbd">PRODUCTS</Link>
+            <Link color="#ecebbd" variant="h6">
+              PRODUCTS
+            </Link>
           </RouterLink>
           <RouterLink to="/contact">
-            <Link color="#ecebbd">CONTACT</Link>
+            <Link color="#ecebbd" variant="h6">
+              CONTACT
+            </Link>
           </RouterLink>
           <RouterLink to="/about">
-            <Link color="#ecebbd">ABOUT</Link>
+            <Link color="#ecebbd" variant="h6">
+              ABOUT
+            </Link>
           </RouterLink>
         </Box>
 
@@ -57,7 +63,11 @@ const NavBar = ({ cartItems }) => {
               variant="contained"
               endIcon={
                 <IconButton aria-label="cart">
-                  <Badge badgeContent={cartItems.length} color="secondary" showZero>
+                  <Badge
+                    badgeContent={cartItems.length}
+                    color="secondary"
+                    showZero
+                  >
                     <ShoppingCartIcon />
                   </Badge>
                 </IconButton>
