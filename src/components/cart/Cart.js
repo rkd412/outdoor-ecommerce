@@ -253,7 +253,7 @@ export default function Cart({ cartItems, setCartItems }) {
                     </Typography>
                     {cartItems.filter(onlyUnique).map((x) => (
                       <Box p="10px">
-                        <Typography fontStyle="italic">
+                        <Typography variant="h6" fontStyle="italic">
                           {" "}
                           {PRODUCTS[x].name}
                         </Typography>
@@ -268,7 +268,11 @@ export default function Cart({ cartItems, setCartItems }) {
                     ))}
 
                     <Box>
-                      <Typography fontWeight="fontWeightBold" p="10px">
+                      <Typography
+                        variant="h5"
+                        fontWeight="fontWeightBold"
+                        p="10px"
+                      >
                         Total: $
                         {cartItems
                           .map((x) => PRODUCTS[x].price)
