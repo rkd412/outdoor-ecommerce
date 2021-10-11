@@ -2,9 +2,7 @@ import * as React from "react";
 
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-import Image from "material-ui-image";
 import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -19,6 +17,7 @@ function Copyright() {
       <Link
         color="inherit"
         href="https://www.linkedin.com/in/robert-davis-b72893217/"
+        rel="noopener"
         target="_blank"
       >
         RKD412
@@ -60,25 +59,29 @@ export default function About() {
           [theme.breakpoints.down("sm")]: {
             flexDirection: "column",
             pt: "10vh",
-            height: "110vh",
+            height: "100vh",
           },
         }}
       >
-        <Box
-          sx={{
-            width: "80%",
+     
+          <Paper   sx={{
+            width: "100%",
             height: "40%",
             margin: "5vw",
-            background: "red",
-          }}
-        >
-          <img
-            src={Headquarters}
-            alt="Headquarters"
-            height="100%"
-            width="100%"
-          />
-        </Box>
+            [theme.breakpoints.down("sm")]: {
+              width: "90%",
+              height: "30%",
+              margin: "0vw",
+            },
+          }}>
+            <img
+              src={Headquarters}
+              alt="Headquarters"
+              height="100%"
+              width="100%"
+            />
+          </Paper>
+      
 
         <Box
           sx={{

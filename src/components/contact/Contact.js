@@ -21,6 +21,7 @@ function Copyright() {
         color="inherit"
         href="https://www.linkedin.com/in/robert-davis-b72893217/"
         target="_blank"
+        rel="noopener"
       >
         RKD412
       </Link>{" "}

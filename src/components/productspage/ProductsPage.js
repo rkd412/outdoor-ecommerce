@@ -73,6 +73,7 @@ function Copyright() {
         color="inherit"
         href="https://www.linkedin.com/in/robert-davis-b72893217/"
         target="_blank"
+        rel="noopener"
       >
         RKD412
       </Link>{" "}
@@ -84,7 +85,7 @@ function Copyright() {
 
 const theme = createTheme();
 
-export default function ProductsPage({ cartItems, setCartItems }) {
+export default function ProductsPage({ setCartItems }) {
   const addToCartHandler = (e) => {
     setCartItems((oldArray) => [...oldArray, e.currentTarget.value].sort());
   };
@@ -117,7 +118,7 @@ export default function ProductsPage({ cartItems, setCartItems }) {
         <Container sx={{ py: 8 }} maxWidth="md">
           <Grid container spacing={8}>
             {PRODUCTS.map((x) => (
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid key={x.key} item xs={12} sm={6} md={4}>
                 <Card
                   sx={{
                     height: "100%",

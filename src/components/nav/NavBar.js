@@ -48,16 +48,17 @@ const NavBar = ({ cartItems }) => {
         {isMobile ? (
           <>
             <Drawer
-              anchor="top"
+              anchor="right"
               classes={{ paper: styles.paper }}
               open={openDrawer}
               onClose={() => setOpenDrawer(false)}
+              marginRight="auto"
             >
-              <List>
+              <List >
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/products">
-                      <Link color="#000000">Products</Link>
+                      <Link color="#696969">Products</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -65,7 +66,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/contact">
-                      <Link color="#000000">Contact</Link>
+                      <Link color="#696969">Contact</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -73,7 +74,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/about">
-                      <Link color="#000000">About</Link>
+                      <Link color="#696969">About</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -81,7 +82,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/cart">
-                      <Link color="#000000">Cart</Link>
+                      <Link color="#696969">Cart</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -90,7 +91,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/signin">
-                      <Link color="#000000">Signin</Link>
+                      <Link color="#696969">Signin</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -99,7 +100,7 @@ const NavBar = ({ cartItems }) => {
             </Drawer>
 
             <RouterLink to="/">
-              <Link color="#000000">
+              <Link color="#ecebbd">
                 <img
                   src={Campfire}
                   alt="Logo"
@@ -127,7 +128,7 @@ const NavBar = ({ cartItems }) => {
             </Box>
 
             <Box sx={{ display: "flex", flexDirection: "row", gap: 12 }}>
-              <RouterLink to="/products">
+              <RouterLink color="#ecebbd" variant="h6" to="/products">
                 <Link color="#ecebbd" variant="h6">
                   PRODUCTS
                 </Link>
