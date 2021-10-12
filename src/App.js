@@ -10,6 +10,8 @@ import NavBar from "./components/nav/NavBar";
 import ProductsPage from "./components/productspage/ProductsPage";
 import SignIn from "./components/signin/SignIn";
 
+import ScrollToTop from "./ScrollToTop";
+
 import "./App.css";
 
 ///Hello hello hello hello?
@@ -21,6 +23,7 @@ function App() {
     <Router>
       <div className="App">
         <NavBar cartItems={cartItems} />
+        <ScrollToTop />
         <Switch>
           <Route path="/about">
             <About />
