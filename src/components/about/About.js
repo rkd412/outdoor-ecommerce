@@ -66,13 +66,13 @@ export default function About() {
       >
      
           <Paper   sx={{
-            width: "100%",
+            width: "60%",
             height: "40%",
             margin: "5vw",
             [theme.breakpoints.down("sm")]: {
               width: "90%",
               height: "30%",
-              margin: "5vw",
+              margin: "10vw",
             
             },
           }}>
