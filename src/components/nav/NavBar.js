@@ -127,7 +127,7 @@ const NavBar = ({ cartItems }) => {
               </RouterLink>
             </Box>
 
-            <Box sx={{ display: "flex", flexDirection: "row", gap: 12 }}>
+            <Box sx={{ display: "flex", flexDirection: "row", gap: 16 }}>
               <RouterLink color="#ecebbd" variant="h6" to="/products">
                 <Link color="#ecebbd" variant="h6">
                   PRODUCTS

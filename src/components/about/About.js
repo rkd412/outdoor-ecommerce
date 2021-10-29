@@ -60,6 +60,7 @@ export default function About() {
             flexDirection: "column",
             pt: "10vh",
             height: "100vh",
+            
           },
         }}
       >
@@ -71,7 +72,8 @@ export default function About() {
             [theme.breakpoints.down("sm")]: {
               width: "90%",
               height: "30%",
-              margin: "0vw",
+              margin: "5vw",
+            
             },
           }}>
             <img
@@ -87,9 +89,10 @@ export default function About() {
           sx={{
             display: "flex",
             margin: "5vw",
+            fontSize: "2",
           }}
         >
-          <Typography variant="h4" align="justify" color="white" paragraph>
+          <Typography variant="h6" align="justify" color="white" paragraph>
             Founded circa 1988 and headquartered in Kiefern, WA - Our love of
             the wilderness and planet earth is key to our success. We hope you
             enjoy the top quality products you find here and put them to good
