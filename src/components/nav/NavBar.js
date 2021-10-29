@@ -109,7 +109,7 @@ const NavBar = ({ cartItems }) => {
               </Link>
             </RouterLink>
 
-            <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
+            <IconButton aria-label="Mobile menu" onClick={() => setOpenDrawer(!openDrawer)}>
               <MenuIcon />
             </IconButton>
           </>
