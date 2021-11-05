@@ -21,7 +21,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { makeStyles } from "@mui/styles";
 import { useTheme } from "@mui/material/styles";
 
-import Campfire from "../../assests/icon-campfire.webp";
+import Campfire from "../../assests/icon-campfire.png";
 
 const useStyles = makeStyles({
   paper: {
@@ -54,7 +54,7 @@ const NavBar = ({ cartItems }) => {
               onClose={() => setOpenDrawer(false)}
               marginRight="auto"
             >
-              <List >
+              <List>
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/products">
@@ -109,7 +109,10 @@ const NavBar = ({ cartItems }) => {
               </Link>
             </RouterLink>
 
-            <IconButton aria-label="Mobile menu" onClick={() => setOpenDrawer(!openDrawer)}>
+            <IconButton
+              aria-label="Mobile menu"
+              onClick={() => setOpenDrawer(!openDrawer)}
+            >
               <MenuIcon />
             </IconButton>
           </>
