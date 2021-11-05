@@ -19,12 +19,12 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import Tooltip from "@mui/material/Tooltip";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import Backpack from "../../assests/product-backpack.jpg";
-import Boots from "../../assests/product-boots.jpg";
-import Flashlight from "../../assests/product-flashlight.jpg";
-import Pan from "../../assests/product-pan.jpg";
-import SleepingBag from "../../assests/product-sleeping-bag.jpg";
-import Tent from "../../assests/product-tent.jpg";
+import Backpack from "../../assests/product-backpack.webp";
+import Boots from "../../assests/product-boots.webp";
+import Flashlight from "../../assests/product-flashlight.webp";
+import Pan from "../../assests/product-pan.webp";
+import SleepingBag from "../../assests/product-sleeping-bag.webp";
+import Tent from "../../assests/product-tent.webp";
 
 const PRODUCTS = [
   {

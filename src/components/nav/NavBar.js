@@ -21,7 +21,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { makeStyles } from "@mui/styles";
 import { useTheme } from "@mui/material/styles";
 
-import Campfire from "../../assests/icon-campfire.png";
+import Campfire from "../../assests/icon-campfire.webp";
 
 const useStyles = makeStyles({
   paper: {

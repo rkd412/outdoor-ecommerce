@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import Forest from "../../assests/forest.jpg";
+import Forest from "../../assests/forest.webp";
 
 function Copyright() {
   return (

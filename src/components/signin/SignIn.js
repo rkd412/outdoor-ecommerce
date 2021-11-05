@@ -14,7 +14,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import Hiker from "../../assests/hiker.jpg";
+import Hiker from "../../assests/hiker.webp";
 
 function Copyright() {
   return (

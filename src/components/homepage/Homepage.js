@@ -6,7 +6,7 @@ import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import Mountains from "../../assests/mountains.jpg";
+import Mountains from "../../assests/mountains.webp";
 
 function Copyright() {
   return (

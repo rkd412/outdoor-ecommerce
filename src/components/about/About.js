@@ -7,8 +7,8 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import Dusk from "../../assests/dusk.jpg";
-import Headquarters from "../../assests/headquarters.jpg";
+import Dusk from "../../assests/dusk.webp";
+import Headquarters from "../../assests/headquarters.webp";
 
 function Copyright() {
   return (
