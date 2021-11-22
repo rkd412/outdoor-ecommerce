@@ -40,7 +40,7 @@ const NavBar = ({ cartItems }) => {
       <Toolbar
         variant="regular"
         sx={{
-          backgroundColor: "#8f9779",
+          backgroundColor: "#66806A",
           justifyContent: "space-between",
           display: "flex",
         }}
@@ -58,7 +58,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/products">
-                      <Link color="#696969">Products</Link>
+                      <Link color="#FFF1AF">Products</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -66,7 +66,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/contact">
-                      <Link color="#696969">Contact</Link>
+                      <Link color="#FFF1AF">Contact</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -74,7 +74,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/about">
-                      <Link color="#696969">About</Link>
+                      <Link color="#FFF1AF">About</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -82,7 +82,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/cart">
-                      <Link color="#696969">Cart</Link>
+                      <Link color="#FFF1AF">Cart</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -91,7 +91,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/signin">
-                      <Link color="#696969">Signin</Link>
+                      <Link color="#FFF1AF">Signin</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -100,7 +100,7 @@ const NavBar = ({ cartItems }) => {
             </Drawer>
 
             <RouterLink to="/">
-              <Link color="#ecebbd">
+              <Link color="#FFF1AF">
                 <img
                   src={Campfire}
                   alt="Logo"
@@ -120,7 +120,7 @@ const NavBar = ({ cartItems }) => {
           <>
             <Box sx={{ display: "flex", flexDirection: "row", gap: 12 }}>
               <RouterLink to="/">
-                <Link color="#ecebbd">
+                <Link color="#FFF1AF">
                   <img
                     src={Campfire}
                     alt="Logo"
@@ -131,18 +131,18 @@ const NavBar = ({ cartItems }) => {
             </Box>
 
             <Box sx={{ display: "flex", flexDirection: "row", gap: 16 }}>
-              <RouterLink color="#ecebbd" variant="h6" to="/products">
-                <Link color="#ecebbd" variant="h6">
+              <RouterLink color="#FFF1AF" variant="h6" to="/products">
+                <Link color="#FFF1AF" variant="h6">
                   PRODUCTS
                 </Link>
               </RouterLink>
               <RouterLink to="/contact">
-                <Link color="#ecebbd" variant="h6">
+                <Link color="#FFF1AF" variant="h6">
                   CONTACT
                 </Link>
               </RouterLink>
               <RouterLink to="/about">
-                <Link color="#ecebbd" variant="h6">
+                <Link color="#FFF1AF" variant="h6">
                   ABOUT
                 </Link>
               </RouterLink>
