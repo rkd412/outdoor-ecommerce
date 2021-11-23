@@ -92,7 +92,7 @@ export default function About() {
             fontSize: "2",
           }}
         >
-          <Typography variant="h6" align="justify" color="white" paragraph>
+          <Typography variant="h6" align="justify" color="#ffffff" paragraph>
             Founded circa 1988 and headquartered in Kiefern, WA - Our love of
             the wilderness and planet earth is key to our success. We hope you
             enjoy the top quality products you find here and put them to good

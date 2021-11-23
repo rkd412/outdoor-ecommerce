@@ -58,7 +58,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/products">
-                      <Link color="#FFF1AF">Products</Link>
+                      <Link color="#000000">Products</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -66,7 +66,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/contact">
-                      <Link color="#FFF1AF">Contact</Link>
+                      <Link color="#000000">Contact</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -74,7 +74,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/about">
-                      <Link color="#FFF1AF">About</Link>
+                      <Link color="#000000">About</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -82,7 +82,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/cart">
-                      <Link color="#FFF1AF">Cart</Link>
+                      <Link color="#000000">Cart</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
@@ -91,7 +91,7 @@ const NavBar = ({ cartItems }) => {
                 <ListItem onClick={() => setOpenDrawer(false)}>
                   <ListItemText>
                     <RouterLink to="/signin">
-                      <Link color="#FFF1AF">Signin</Link>
+                      <Link color="#000000">Signin</Link>
                     </RouterLink>
                   </ListItemText>
                 </ListItem>
