@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -14,10 +14,14 @@ import ScrollToTop from "./ScrollToTop";
 
 import "./App.css";
 
-///Hello hello hello hello?
-
 function App() {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(
+    JSON.parse(localStorage.getItem("CART_ITEMS"))
+  );
+
+  useEffect(() => {
+    localStorage.setItem("CART_ITEMS", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   return (
     <Router>
