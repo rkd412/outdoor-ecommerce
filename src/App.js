@@ -15,9 +15,15 @@ import ScrollToTop from "./ScrollToTop";
 import "./App.css";
 
 function App() {
-  const [cartItems, setCartItems] = useState(
-    JSON.parse(localStorage.getItem("CART_ITEMS"))
-  );
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    if (localStorage.getItem("CART_ITEMS") === null) {
+      setCartItems([]);
+    } else {
+      setCartItems(JSON.parse(localStorage.getItem("CART_ITEMS")));
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("CART_ITEMS", JSON.stringify(cartItems));
